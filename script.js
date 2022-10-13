@@ -152,3 +152,40 @@ a = {
     }
 
     calculate(45 ,18)
+
+    // js classes
+    class Car {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+        age(x) {
+          return x - this.year;
+        }
+      }
+      
+      let date = new Date();
+      let year = date.getFullYear();
+      
+      let myCar = new Car("Ford", 2014);
+      document.getElementById("demo").innerHTML=
+      "My car is " + myCar.age(year) + " years old.";
+
+
+      //deep copy
+      
+var employee = {
+    eid: "E102",
+    ename: "Jack",
+    eaddress: "New York",
+    salary: 50000
+}
+console.log("=========Deep Copy========");
+var newEmployee = JSON.parse(JSON.stringify(employee));
+console.log("Employee=> ", employee);
+console.log("New Employee=> ", newEmployee);
+console.log("---------After modification---------");
+newEmployee.ename = "Beck";
+newEmployee.salary = 70000;
+console.log("Employee=> ", employee);
+console.log("New Employee=> ", newEmployee);
